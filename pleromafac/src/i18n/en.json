@@ -1,0 +1,122 @@
+{
+  "nav": {
+  "home": "Home",
+  "story": "Our Story",
+  "services": "Services",
+  "training": "Trainings",
+  "contact": "Contact"
+
+  },
+
+  "hero": {
+    "title": "Building Safety Through Inclusive Design",
+    "subtitle": "Pleroma is a specialist consultancy delivering integrated fire safety engineering, accessibility design, and Universal Design solutions — helping organisations create environments that are safe, compliant, and inclusive for everyone.",
+    "ctaPrimary": "Contact Us",
+    "ctaSecondary": "Our Services"
+  },
+  
+  "story": {
+    "label": "Our Story",
+    "heading": "A consultancy shaped by lived experience",
+    "p1": "The vision behind Pleroma was inspired by the lived experience of a close family member of our founder, who became an expert in fire engineering. Witnessing firsthand the challenges people with disabilities face in fully participating in everyday life and during emergencies created a strong motivation to make a difference.",
+    "p2": "In 2025, Pleroma was established as a consultancy providing fire safety engineering and accessibility design services. We deliver integrated design solutions that bring together fire engineering, Universal Design, accessibility, disability inclusion, and specialist training.",
+    "p3": "Our goal is to create safer, more inclusive environments where everyone can navigate daily life and emergency situations with confidence."
+  },
+  
+  "services": {
+  "label": "Services",
+  "heading": "Specialist consultancy services",
+  "intro": "Pleroma provides integrated fire safety engineering and accessibility consultancy services, delivering compliant, resilient, and inclusive design solutions across the built environment.",
+
+  "fire": {
+    "title": "Fire & Life Safety",
+    "description": "Performance-based fire safety solutions aligned with international best practice, while respecting architectural intent and design integrity.",
+    "p1": "Performance-based fire safety design",
+    "p2": "CFD modelling for smoke control and visibility",
+    "p3": "Fire risk assessments and safety audits",
+    "p4": "Fire strategy development and peer reviews",
+    "p5": "Integrated detection, alarm, and suppression systems"
+  },
+
+  "access": {
+    "title": "Accessibility Consultancy",
+    "description": "Accessibility-led consultancy grounded in Universal Design principles, supporting environments that are intuitive, inclusive, and fully compliant.",
+    "p1": "Universal Design and accessibility strategies",
+    "p2": "Compliance with BS 8300, ISO, ADA, and global standards",
+    "p3": "Accessibility audits and regulatory assessments",
+    "p4": "Inclusive spatial planning, circulation, and wayfinding",
+    "p5": "Integration of assistive and inclusive design solutions"
+  },
+
+  "audit": {
+    "title": "Accessibility & Access Audits",
+    "description": "Independent, evidence-based audits identifying physical, procedural, and operational barriers to support inclusive, safe, and compliant environments.",
+    "p1": "Comprehensive built environment accessibility audits",
+    "p2": "Assessment against national and international standards",
+    "p3": "Identification of physical, operational, and procedural barriers",
+    "p4": "Inclusive evacuation and emergency planning considerations",
+    "p5": "Clear, prioritised recommendations and action plans"
+  }
+}
+,
+    
+  
+
+  "training": {
+    "label": "Training",
+    "heading": "Professional Training",
+    "intro": "Specialist training programmes supporting fire safety, accessibility, and inclusive practice across the built environment.",
+
+    "fire": {
+      "title": "Master Fire Safety",
+      "summary": "Advanced fire safety engineering training for professionals responsible for safety, compliance, and emergency planning."
+    },
+
+    "access": {
+      "title": "Accessibility and Inclusion Training",
+      "summary": "Training programmes focused on disability awareness, accessibility, and inclusive service delivery."
+    },
+
+    "universal": {
+      "title": "Embedding Universal Design",
+      "summary": "International training programmes supporting the integration of accessibility and Universal Design."
+    },
+
+    "cta": "View all training programmes"
+  },
+  
+  "contact": {
+    "label": "Contact",
+    "heading": "Get in touch",
+    "intro": "For consultancy services, training enquiries, or general information, please contact us using the form below.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone number",
+    "message": "Message",
+    "submit": "Send message"
+  },
+  
+  "footer": {
+    "tagline": "Fire safety, accessibility, and inclusive design consultancy.",
+    "office": "Office",
+    "follow": "Follow us",
+    "rights": "All rights reserved."
+  }
+
+
+
+
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+
