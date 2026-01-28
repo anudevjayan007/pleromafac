@@ -1,10 +1,29 @@
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../i18n/LanguageSwitcher";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+function useScrollOffset() {
+  const [offset, setOffset] = useState(-80);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      // mobile vs desktop breakpoint
+      setOffset(window.innerWidth < 768 ? -72 : -80);
+    };
+
+    updateOffset();
+    window.addEventListener("resize", updateOffset);
+    return () => window.removeEventListener("resize", updateOffset);
+  }, []);
+
+  return offset;
+}
 
 export default function Navbar() {
-  const { t } = useTranslation();
+const { t } = useTranslation();
+
+
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,7 +35,9 @@ export default function Navbar() {
         </h1>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-8 text-white font-medium">
+<ul className="hidden md:flex items-center space-x-8 font-medium">
+
+
           <NavLink to="hero">{t("nav.home")}</NavLink>
           <NavLink to="story">{t("nav.story")}</NavLink>
           <NavLink to="services">{t("nav.services")}</NavLink>
@@ -66,13 +87,14 @@ export default function Navbar() {
 
 
 function NavLink({ to, children }) {
+  const offset = useScrollOffset();
   return (
     <Link
       to={to}
       smooth
       duration={500}
       spy={true}
-      offset={-60}
+      offset={offset}
       activeClass="active"
       className="cursor-pointer relative transition
                  text-white hover:text-teal-400
@@ -88,11 +110,13 @@ function NavLink({ to, children }) {
 
 
 function MobileNavLink({ to, children, setOpen }) {
+  const offset = useScrollOffset();
   return (
     <Link
       to={to}
       smooth
-      offset={-10}
+          offset={offset}
+
       duration={500}
       onClick={() => setOpen(false)}
       className="px-6 py-4 border-b border-white/10

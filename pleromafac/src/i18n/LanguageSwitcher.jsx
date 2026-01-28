@@ -18,8 +18,8 @@ export default function LanguageToggle() {
                  hover:border-teal-400 transition"
     >
       <span
-        className={`absolute w-6 h-6 rounded-full bg-teal-400 transition-transform
-          ${isArabic ? "translate-x-8" : "translate-x-1"}`}
+        className={`absolute w-8 h-6 rounded-full bg-teal-400 transition-transform
+          ${isArabic ? "translate-x--1" : "translate-x-1"}`}
       />
       <span className="absolute left-2 text-xs text-white">EN</span>
       <span className="absolute right-2 text-xs text-white">AR</span>

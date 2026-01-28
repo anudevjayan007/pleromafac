@@ -53,7 +53,7 @@ export default function Footer() {
             {/* RIGHT: Social */}
             <div>
               <p className="font-medium text-white mb-4 text-sm">
-                {t("footer.connect")}
+                {t("footer.follow")}
               </p>
 
               <div className="flex gap-4">

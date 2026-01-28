@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
+
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -8,7 +10,7 @@ export default function Hero() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT: TEXT */}
-        <div className="max-w-xl space-y-6">
+        <div className="max-w-xl space-y-0 md:space-y-6">
           <h1 className="leading-tight">
             {t("hero.title")}
           </h1>
@@ -17,15 +19,32 @@ export default function Hero() {
             {t("hero.subtitle")}
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button className="btn-primary">
-              {t("hero.ctaPrimary")}
-            </button>
+        <div className="flex flex-wrap gap-4 pt-4">
+  {/* Contact */}
+  <Link
+    to="contact"
+    smooth
+    duration={500}
+    offset={-80}
+  >
+    <button className="btn-primary">
+      {t("hero.ctaPrimary")}
+    </button>
+  </Link>
 
-            <button className="btn-outline">
-              {t("hero.ctaSecondary")}
-            </button>
-          </div>
+  {/* Services */}
+  <Link
+    to="services"
+    smooth
+    duration={500}
+    offset={-80}
+  >
+    <button className="btn-outline">
+      {t("hero.ctaSecondary")}
+    </button>
+  </Link>
+</div>
+
         </div>
 
         {/* RIGHT: IMAGE */}

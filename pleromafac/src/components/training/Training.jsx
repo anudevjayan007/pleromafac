@@ -77,10 +77,6 @@ function TrainingCard({ title, summary }) {
       <p className="text-gray-300 leading-relaxed">
         {summary}
       </p>
-
-      <span className="mt-6 inline-block text-sm text-teal-400">
-        Learn more →
-      </span>
     </div>
   );
 }

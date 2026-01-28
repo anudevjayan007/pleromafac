@@ -29,7 +29,7 @@
   "intro": "Pleroma provides integrated fire safety engineering and accessibility consultancy services, delivering compliant, resilient, and inclusive design solutions across the built environment.",
 
   "fire": {
-    "title": "Fire & Life Safety",
+    "title": "Fire & Life Safety Engineering ",
     "description": "Performance-based fire safety solutions aligned with international best practice, while respecting architectural intent and design integrity.",
     "p1": "Performance-based fire safety design",
     "p2": "CFD modelling for smoke control and visibility",
@@ -39,7 +39,7 @@
   },
 
   "access": {
-    "title": "Accessibility Consultancy",
+    "title": "Accessibility  Design",
     "description": "Accessibility-led consultancy grounded in Universal Design principles, supporting environments that are intuitive, inclusive, and fully compliant.",
     "p1": "Universal Design and accessibility strategies",
     "p2": "Compliance with BS 8300, ISO, ADA, and global standards",
