@@ -1,79 +1,221 @@
-import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../i18n/LanguageSwitcher";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
+import {
+  Link as RouterLink,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+
+import useActiveSection from "../../hooks/activeSession";
+
+/* ---------------- scroll offset ---------------- */
 function useScrollOffset() {
   const [offset, setOffset] = useState(-80);
 
   useEffect(() => {
-    const updateOffset = () => {
-      // mobile vs desktop breakpoint
+    const update = () => {
       setOffset(window.innerWidth < 768 ? -72 : -80);
     };
-
-    updateOffset();
-    window.addEventListener("resize", updateOffset);
-    return () => window.removeEventListener("resize", updateOffset);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
   return offset;
 }
 
+/* ---------------- navbar ---------------- */
 export default function Navbar() {
-const { t } = useTranslation();
-
-
-
+  const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const offset = useScrollOffset();
   const [open, setOpen] = useState(false);
+
+  const isHome = location.pathname === "/";
+
+  // ✅ ALWAYS call the hook (no conditional hooks)
+  const scrollActive = useActiveSection([
+    "hero",
+    "story",
+    "services",
+    "training",
+  ]);
+
+  const isActive = (section) =>
+    isHome && scrollActive === section;
+
+  const routeActive = (path) =>
+    location.pathname === path;
+
+  const baseLink =
+    "relative cursor-pointer transition text-white hover:text-teal-400";
+
+  const underline =
+    "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-teal-400 after:transition-all";
+
+  const activeUnderline = "text-teal-400 after:w-full";
+  const inactiveUnderline = "after:w-0";
+
+  const desktopClass = (active) =>
+    `${baseLink} ${underline} ${
+      active ? activeUnderline : inactiveUnderline
+    }`;
+
+  const mobileClass =
+    "px-6 py-4 border-b border-white/10 hover:bg-teal-500/10 hover:text-teal-400 transition";
+
+  /* ---------- helper: route → home → scroll ---------- */
+  const goHomeAndScroll = (id) => {
+    navigate("/", { state: { scrollTo: id } });
+    setOpen(false);
+  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-gray-950/70 backdrop-blur-md border-b border-white/10">
       <div className="container flex justify-between items-center h-20">
-        {/* Logo */}
-        <h1 className="text-xl font-bold text-white">
-          Pleroma<span className="text-teal-400">.</span>
-        </h1>
 
-        {/* Desktop Nav */}
-<ul className="hidden md:flex items-center space-x-8 font-medium">
+        {/* LOGO */}
+        <RouterLink to="/">
+          <img
+            src="/Asset 3.svg"
+            alt="Pleroma – Fire safety and accessibility consultancy"
+            className="h-10 w-auto brightness-100 contrast-200"
+          />
+        </RouterLink>
 
+        {/* ---------------- DESKTOP NAV ---------------- */}
+        <ul className="hidden md:flex items-center space-x-8 font-medium">
+          {isHome ? (
+            <ScrollLink
+              to="hero"
+              smooth
+              offset={offset}
+              className={desktopClass(isActive("hero"))}
+            >
+              {t("nav.home")}
+            </ScrollLink>
+          ) : (
+            <button
+              className={desktopClass(routeActive("/"))}
+              onClick={() => goHomeAndScroll("hero")}
+            >
+              {t("nav.home")}
+            </button>
+          )}
 
-          <NavLink to="hero">{t("nav.home")}</NavLink>
-          <NavLink to="story">{t("nav.story")}</NavLink>
-          <NavLink to="services">{t("nav.services")}</NavLink>
-          <NavLink to="training">{t("nav.training")}</NavLink>
-          <NavLink to="contact">{t("nav.contact")}</NavLink>
+          {["story", "services", "training"].map((id) =>
+            isHome ? (
+              <ScrollLink
+                key={id}
+                to={id}
+                smooth
+                offset={offset}
+                className={desktopClass(isActive(id))}
+              >
+                {t(`nav.${id}`)}
+              </ScrollLink>
+            ) : (
+              <button
+                key={id}
+                className={desktopClass(false)}
+                onClick={() => goHomeAndScroll(id)}
+              >
+                {t(`nav.${id}`)}
+              </button>
+            )
+          )}
+
+          <RouterLink
+            to="/contact"
+            className={desktopClass(routeActive("/contact"))}
+          >
+            {t("nav.contact")}
+          </RouterLink>
+
+          <RouterLink
+            to="/knowledge"
+            className={desktopClass(routeActive("/knowledge"))}
+          >
+            {t("nav.insights")}
+          </RouterLink>
+
           <LanguageSwitcher />
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* ---------------- MOBILE TOGGLE ---------------- */}
         <button
           className="md:hidden text-white text-2xl"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
           ☰
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ---------------- MOBILE MENU ---------------- */}
       {open && (
         <div className="md:hidden bg-gray-950 border-t border-white/10">
           <ul className="flex flex-col text-white">
-            <MobileNavLink to="hero" setOpen={setOpen}>
-              {t("nav.home")}
-            </MobileNavLink>
-            <MobileNavLink to="story" setOpen={setOpen}>
-              {t("nav.story")}
-            </MobileNavLink>
-            <MobileNavLink to="services" setOpen={setOpen}>
-              {t("nav.services")}
-            </MobileNavLink>
-            <MobileNavLink to="training" setOpen={setOpen}>
-              {t("nav.training")}
-            </MobileNavLink>
-            <MobileNavLink to="contact" setOpen={setOpen}>
+            {isHome ? (
+              <ScrollLink
+                to="hero"
+                smooth
+                offset={offset}
+                className={mobileClass}
+                onClick={() => setOpen(false)}
+              >
+                {t("nav.home")}
+              </ScrollLink>
+            ) : (
+              <button
+                className={mobileClass}
+                onClick={() => goHomeAndScroll("hero")}
+              >
+                {t("nav.home")}
+              </button>
+            )}
+
+            {["story", "services", "training"].map((id) =>
+              isHome ? (
+                <ScrollLink
+                  key={id}
+                  to={id}
+                  smooth
+                  offset={offset}
+                  className={mobileClass}
+                  onClick={() => setOpen(false)}
+                >
+                  {t(`nav.${id}`)}
+                </ScrollLink>
+              ) : (
+                <button
+                  key={id}
+                  className={mobileClass}
+                  onClick={() => goHomeAndScroll(id)}
+                >
+                  {t(`nav.${id}`)}
+                </button>
+              )
+            )}
+
+            <RouterLink
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className={mobileClass}
+            >
               {t("nav.contact")}
-            </MobileNavLink>
+            </RouterLink>
+
+            <RouterLink
+              to="/knowledge"
+              onClick={() => setOpen(false)}
+              className={mobileClass}
+            >
+              {t("nav.knowledge")}
+            </RouterLink>
           </ul>
 
           <div className="px-6 py-4">
@@ -82,48 +224,5 @@ const { t } = useTranslation();
         </div>
       )}
     </nav>
-  );
-}
-
-
-function NavLink({ to, children }) {
-  const offset = useScrollOffset();
-  return (
-    <Link
-      to={to}
-      smooth
-      duration={500}
-      spy={true}
-      offset={offset}
-      activeClass="active"
-      className="cursor-pointer relative transition
-                 text-white hover:text-teal-400
-                 after:absolute after:start-0 after:-bottom-1
-                 after:h-[2px] after:w-0 after:bg-teal-400
-                 after:transition-all"
-    >
-      {children}
-    </Link>
-  );
-}
-
-
-
-function MobileNavLink({ to, children, setOpen }) {
-  const offset = useScrollOffset();
-  return (
-    <Link
-      to={to}
-      smooth
-          offset={offset}
-
-      duration={500}
-      onClick={() => setOpen(false)}
-      className="px-6 py-4 border-b border-white/10
-                 transition hover:bg-teal-500/10
-                 hover:text-teal-400 cursor-pointer"
-    >
-      {children}
-    </Link>
   );
 }

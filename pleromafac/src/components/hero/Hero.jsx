@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4 pt-4">
   {/* Contact */}
   <Link
-    to="contact"
+    to="/contact"
     smooth
     duration={500}
     offset={-80}

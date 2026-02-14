@@ -42,16 +42,17 @@ export default function Trainings() {
 </div>
 
           {/* CTA */}
-          <div className="mt-12">
-            <div
-            
-              className="inline-flex items-center gap-2
-                         text-teal-400 font-medium
-                         hover:underline"
-            >
-              {t("training.cta")} →
-            </div>
-          </div>
+      <div className="mt-12">
+  <Link
+    to="/trainings"
+    className="inline-flex items-center gap-2
+               text-teal-400 font-medium
+               hover:text-teal-300 transition"
+  >
+    {t("training.cta")} →
+  </Link>
+</div>
+
 
         </div>
       </div>

@@ -9,17 +9,18 @@ export default function Footer() {
       <div className="container py-16">
         <div className="max-w-6xl mx-auto">
 
-          {/* Main footer content */}
           <div className="grid md:grid-cols-3 gap-12 items-start">
 
             {/* LEFT: Brand */}
             <div>
-              <div className="text-xl font-semibold tracking-tight">
-                Pleroma<span className="text-teal-400">.</span>
-              </div>
+              <img
+                src="/light.png"
+                alt="Pleroma – Safety Engineered. Access Designed."
+                className="h-10 w-auto mb-4"
+              />
 
-              <p className="mt-4 text-sm text-gray-400 max-w-xs leading-relaxed">
-                {t("footer.tagline")}
+              <p className="text-sm text-gray-400 max-w-xs">
+                Safety Engineered. Access Designed.
               </p>
 
               <p className="mt-6 text-sm text-gray-500">
@@ -28,33 +29,42 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* CENTER: Address */}
-            <div className="text-sm text-gray-300 leading-relaxed">
-              <p className="font-medium text-white mb-3">
-                {t("footer.office")}
-              </p>
+            {/* CENTER: Addresses */}
+            <div className="text-sm text-gray-300 leading-relaxed md:pl-8">
+              <div className="mb-6">
+                <p className="text-white font-medium">United Kingdom</p>
+                <p className="mt-1">
+                  23 Broom Hill<br />
+                  Portadown, NI<br />
+                  United Kingdom
+                </p>
+              </div>
 
-              <p>
-                23 Broom Hill<br />
-                Portadown, NI<br />
-                United Kingdom
-              </p>
-
-              <p className="mt-4">
-                <a
-                  href="mailto:info@pleromaconsultants.com"
-                  className="hover:text-teal-400 transition"
-                >
-                  info@pleromaconsultants.com
-                </a>
-              </p>
+              <div>
+                <p className="text-white font-medium">Qatar</p>
+                <p className="mt-1">
+                  Warehouse A1-Ai, Dohatna Logistics Park<br />
+                  Umm Shaharaine 1, Bldg 90<br />
+                  St 1236, Zone 71, Doha
+                </p>
+              </div>
             </div>
 
-            {/* RIGHT: Social */}
+            {/* RIGHT: Contact & Social */}
             <div>
               <p className="font-medium text-white mb-4 text-sm">
-                {t("footer.follow")}
+                Contact us
               </p>
+
+              <div className="mb-6 space-y-1 text-sm">
+                
+                <a
+                  href="mailto:team@coastlinerac.com"
+                  className="block hover:text-teal-400 transition"
+                >
+                  team@coastlinerac.com
+                </a>
+              </div>
 
               <div className="flex gap-4">
                 <SocialIcon

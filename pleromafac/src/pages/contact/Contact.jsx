@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container">
+    <div className="container py-24">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
 
         {/* LEFT – Text */}

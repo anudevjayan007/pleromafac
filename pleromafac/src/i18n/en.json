@@ -4,6 +4,7 @@
   "story": "Our Story",
   "services": "Services",
   "training": "Trainings",
+  "insights": "Insights",
   "contact": "Contact"
 
   },
@@ -68,7 +69,7 @@
     "intro": "Specialist training programmes supporting fire safety, accessibility, and inclusive practice across the built environment.",
 
     "fire": {
-      "title": "Master Fire Safety",
+      "title": "Master in Fire Safety",
       "summary": "Advanced fire safety engineering training for professionals responsible for safety, compliance, and emergency planning."
     },
 
@@ -101,12 +102,138 @@
     "office": "Office",
     "follow": "Follow us",
     "rights": "All rights reserved."
+  },
+
+  
+  "trainingsPage": {
+    "title": "Professional Training Programmes",
+    "intro": "In-depth professional training supporting fire safety engineering, accessibility, and inclusive practice across the built environment.",
+    "why": "Why this programme matters",
+    "learn": "What you will learn",
+    "audience": "Who it is for",
+    "format": "Format and delivery",
+    "contact": "For course dates, delivery formats, or registration information, please contact us for further details."
+  },
+
+  "trainings": {
+    "fire": {
+      "title": "Master in Fire Safety",
+      "overview": "Advanced fire safety engineering training for professionals responsible for compliance, risk management, and emergency planning.",
+      "why": "Fire safety failures continue to present significant risks in complex buildings. A deep understanding of fire behaviour, regulatory frameworks, and performance-based design is essential for safeguarding life and property.",
+      "learn": [
+        "External wall fire spread and façade fire dynamics",
+        "Performance-based fire safety engineering approaches",
+        "Passive fire protection systems and detailing",
+        "Fire strategy development and implementation",
+        "Fire risk assessment methodologies"
+      ],
+      "audience": "Engineers, facility managers, safety officers, and security professionals working across residential, industrial, healthcare, and public buildings.",
+      "format": "Delivered as in-person workshops or online programmes, adapted to regulatory and project contexts."
+    },
+
+    "access": {
+      "title": "Accessibility and Inclusion Training",
+      "overview": "Professional training addressing disability awareness, accessibility, and inclusive service delivery.",
+      "why": "Accessibility is fundamental to safety, dignity, and independence. Organisations must move beyond compliance checklists to embed inclusive practice.",
+      "learn": [
+        "Disability awareness and inclusion principles",
+        "Accessibility in the built environment",
+        "Inclusive customer service and information provision",
+        "Workplace accessibility and reasonable accommodations"
+      ],
+      "audience": "Public, private, and voluntary sector organisations.",
+      "format": "Public programmes and customised in-company training."
+    },
+
+    "universal": {
+      "title": "Embedding Universal Design",
+      "overview": "International training supporting integration of Universal Design across buildings and public spaces.",
+      "why": "Universal Design improves safety, usability, and long-term value while reducing risk.",
+      "learn": [
+        "Universal Design principles and application",
+        "Accessibility in procurement and capital works",
+        "Health, safety, and accessibility intersections",
+        "Consultation and co-design approaches",
+        "Accessibility action planning"
+      ],
+      "audience": "Architects, designers, project managers, public authorities, and NGOs.",
+      "format": "Three-day interactive online programme."
+    },
+
+    "service": {
+      "title": "Universal Service Access",
+      "overview": "Training supporting inclusive service delivery and accessible employment practices.",
+      "why": "Operational barriers prevent full participation. Organisations need structured approaches to accessibility.",
+      "learn": [
+        "Accessible services and employment frameworks",
+        "Organisational accessibility assessment",
+        "Access policies and action planning",
+        "Support mechanisms for disabled staff",
+        "Disability proofing strategies"
+      ],
+      "audience": "Service providers, access officers, and policy teams.",
+      "format": "Two-day practical programme."
+    },
+
+    "audit": {
+      "title": "Universal Access in the Built Environment",
+      "overview": "Intensive programme covering Universal Access, neurodiversity, and access auditing.",
+      "why": "Accessible environments require sound design and effective management.",
+      "learn": [
+        "Disability and equality legislation",
+        "Part M and Disability Access Certificates",
+        "Access auditing techniques",
+        "Facilities management responsibilities",
+        "Identification of everyday barriers"
+      ],
+      "audience": "Built environment professionals and facilities managers.",
+      "format": "Three-day workshop including a graded access audit."
+    }
+  },
+  
+  "knowledge": {
+    "title": "Knowledge & News",
+    "intro": "Analysis and commentary on fire safety, accessibility, and inclusive design.",
+
+    "embers": {
+      "title": "Flying Embers: The Unseen Threat That Could Burn Down Your Skyscraper",
+      "p1": "Flying embers, also known as firebrands, are one of the most underestimated threats in urban fire scenarios. Research consistently shows they are a major cause of secondary ignitions.",
+      "p2": "In dense urban environments, wind turbulence around tall buildings can lift embers hundreds of metres into the air and transport them across city blocks.",
+      "p3": "Balconies, rooftops, vents, façade systems, and architectural features become vulnerable landing zones where embers can accumulate unnoticed.",
+      "points": [
+        "Unpredictable wind patterns around tall buildings",
+        "Multiple ignition points including vents and façades",
+        "Combustible balcony contents and façade materials",
+        "Older buildings lacking ember-resistant detailing",
+        "Increased exposure from urban–wildland interface fires"
+      ],
+      "p4": "Fire safety codes are gradually addressing ember-related risks through non-combustible façades, ember-resistant vents, and improved compartmentation.",
+      "p5": "Continued research, advanced modelling, and proactive planning are essential as cities become taller and denser."
+    },
+
+    "design": {
+      "title": "Design for All: Beyond the Ramp",
+      "p1": "Accessible design is often treated as a compliance exercise, but inclusive design is a strategic approach that improves safety and usability for everyone.",
+      "p2": "Designing for all enables people of all ages and abilities to navigate environments independently and with dignity.",
+      "p3": "When accessibility is integrated early, it enhances architectural quality and long-term resilience.",
+      "points": [
+        "Equity: greater inclusion and independence",
+        "Economy: innovation and long-term value",
+        "Efficiency: safer, more intuitive environments"
+      ],
+      "p4": "Designing for the edges rather than the average creates environments that work better for everyone."
+    }
   }
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
 
 
 
