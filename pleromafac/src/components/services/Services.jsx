@@ -19,6 +19,10 @@ export default function Services() {
         t("services.fire.p3"),
         t("services.fire.p4"),
         t("services.fire.p5"),
+          t("services.fire.p6"),
+            t("services.fire.p7"),
+              t("services.fire.p8"),
+                t("services.fire.p9"),
       ],
     },
     {
@@ -30,6 +34,10 @@ export default function Services() {
         t("services.access.p3"),
         t("services.access.p4"),
         t("services.access.p5"),
+            t("services.access.p6"),
+            t("services.access.p7"),
+              t("services.access.p8"),
+                t("services.access.p9"),
       ],
     },
     {
@@ -41,6 +49,10 @@ export default function Services() {
         t("services.audit.p3"),
         t("services.audit.p4"),
         t("services.audit.p5"),
+           t("services.audit.p6"),
+            t("services.audit.p7"),
+              t("services.audit.p8"),
+        
       ],
     },
   ];

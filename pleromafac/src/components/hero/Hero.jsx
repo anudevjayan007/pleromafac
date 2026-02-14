@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
+import HeroImage from "./HeroImage";
 
 
 export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <div className="container w-full">
+    <div className="container w-full mt-16">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT: TEXT */}
@@ -49,13 +50,7 @@ export default function Hero() {
 
         {/* RIGHT: IMAGE */}
         <div className="relative">
-          <img
-            src="/fire-saftey.webp"
-            alt="Fire safety and accessibility consultancy"
-            className="w-full h-[420px] object-cover rounded-2xl shadow-2xl"
-          />
-
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 to-transparent" />
+             <HeroImage />
         </div>
 
       </div>

@@ -59,26 +59,26 @@ export default function Footer() {
               <div className="mb-6 space-y-1 text-sm">
                 
                 <a
-                  href="mailto:team@coastlinerac.com"
+                  href="mailto:info@pleromafac.com"
                   className="block hover:text-teal-400 transition"
                 >
-                  team@coastlinerac.com
+                  info@pleromafac.com
                 </a>
               </div>
 
               <div className="flex gap-4">
                 <SocialIcon
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/company/pleroma-consultants"
                   icon={<FaLinkedinIn />}
                   label="LinkedIn"
                 />
                 <SocialIcon
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/profile.php?id=61588294885761#"
                   icon={<FaFacebookF />}
                   label="Facebook"
                 />
                 <SocialIcon
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/pleroma.fac?igsh=d3h2eHhoNG05aTN2"
                   icon={<FaInstagram />}
                   label="Instagram"
                 />

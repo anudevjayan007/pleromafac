@@ -4,7 +4,7 @@ export default function TrainingsPage() {
   const { t } = useTranslation();
 
   return (
-    <main className="min-h-screen pt-32 pb-24">
+    <main className="min-h-screen pt-32 pb-8">
       <div className="container max-w-4xl space-y-28">
 
         {/* PAGE HEADER */}

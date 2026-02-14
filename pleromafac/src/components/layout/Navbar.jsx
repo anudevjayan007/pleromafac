@@ -214,7 +214,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={mobileClass}
             >
-              {t("nav.knowledge")}
+              {t("nav.insights")}
             </RouterLink>
           </ul>
 

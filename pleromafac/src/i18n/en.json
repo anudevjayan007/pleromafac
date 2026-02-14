@@ -29,35 +29,50 @@
   "heading": "Specialist consultancy services",
   "intro": "Pleroma provides integrated fire safety engineering and accessibility consultancy services, delivering compliant, resilient, and inclusive design solutions across the built environment.",
 
-  "fire": {
-    "title": "Fire & Life Safety Engineering ",
-    "description": "Performance-based fire safety solutions aligned with international best practice, while respecting architectural intent and design integrity.",
-    "p1": "Performance-based fire safety design",
-    "p2": "CFD modelling for smoke control and visibility",
-    "p3": "Fire risk assessments and safety audits",
-    "p4": "Fire strategy development and peer reviews",
-    "p5": "Integrated detection, alarm, and suppression systems"
-  },
+"fire": {
+  "title": "Fire & Life Safety Engineering",
+  "description": "Performance-based fire safety solutions aligned with international best practice, while respecting architectural intent and design integrity.",
+  "p1": "Performance-based fire safety design",
+  "p2": "CFD modelling for smoke control and tenability analysis",
+  "p3": "Fire risk assessments and fire safety audits",
+  "p4": "Fire strategy development and independent peer reviews",
+  "p5": "Design and review of integrated fire detection, alarm, and suppression systems",
+  "p6": "Code-compliant fire safety design solutions",
+  "p7": "Third-party compliance reviews of fire detection, alarm, and suppression systems",
+  "p8": "Witnessing of testing and commissioning of fire detection, alarm, and suppression systems",
+  "p9": "Fire protection system operational audits"
+}
+,
 
   "access": {
-    "title": "Accessibility  Design",
-    "description": "Accessibility-led consultancy grounded in Universal Design principles, supporting environments that are intuitive, inclusive, and fully compliant.",
-    "p1": "Universal Design and accessibility strategies",
-    "p2": "Compliance with BS 8300, ISO, ADA, and global standards",
-    "p3": "Accessibility audits and regulatory assessments",
-    "p4": "Inclusive spatial planning, circulation, and wayfinding",
-    "p5": "Integration of assistive and inclusive design solutions"
-  },
+  "title": "Accessibility Design",
+  "description": "Accessibility-led consultancy grounded in Universal Design principles, supporting environments that are intuitive, inclusive, and fully compliant.",
+  "p1": "Universal Design and accessibility strategies",
+  "p2": "Compliance with BS 8300, ISO, ADA, and global standards",
+  "p3": "Accessibility audits and regulatory assessments",
+  "p4": "Inclusive spatial planning, circulation, and wayfinding",
+  "p5": "Integration of assistive and inclusive design solutions",
+  "p6": "Strategic implementation of the seven principles of Universal Design across the built environment",
+  "p7": "Early-stage accessibility and Universal Design integration from concept design through delivery",
+  "p8": "User-experience–led assessment of buildings, spaces, and public environments",
+  "p9": "Collaborative design coordination with architects, engineers, and stakeholders to embed inclusion across disciplines"
+}
+,
 
-  "audit": {
-    "title": "Accessibility & Access Audits",
-    "description": "Independent, evidence-based audits identifying physical, procedural, and operational barriers to support inclusive, safe, and compliant environments.",
-    "p1": "Comprehensive built environment accessibility audits",
-    "p2": "Assessment against national and international standards",
-    "p3": "Identification of physical, operational, and procedural barriers",
-    "p4": "Inclusive evacuation and emergency planning considerations",
-    "p5": "Clear, prioritised recommendations and action plans"
-  }
+"audit": {
+  "title": "Accessibility & Access Audits",
+  "description": "Independent, evidence-based audits identifying physical, procedural, and operational barriers to support inclusive, safe, and compliant environments.",
+  "p1": "Comprehensive built environment accessibility audits",
+  "p2": "Assessment against national and international standards",
+  "p3": "Identification of physical, operational, and procedural barriers",
+  "p4": "Inclusive evacuation and emergency planning considerations",
+  "p5": "Clear, prioritised recommendations and action plans",
+  "p6": "Detailed evaluation of physical barriers including ramps, door clearances, circulation routes, and navigation paths",
+  "p7": "Review of operational and procedural barriers such as staff protocols and service delivery processes",
+  "p8": "Inclusive emergency access and evacuation reviews covering refuges, tactile signage, and assisted escape routes",
+  "p9": "Actionable implementation guidance including compliance timelines, budget considerations, and phased delivery planning"
+}
+
 }
 ,
     
@@ -69,7 +84,7 @@
     "intro": "Specialist training programmes supporting fire safety, accessibility, and inclusive practice across the built environment.",
 
     "fire": {
-      "title": "Master in Fire Safety",
+     "title": "Fire Safety Engineering: Principles, Prevention, and Protection",
       "summary": "Advanced fire safety engineering training for professionals responsible for safety, compliance, and emergency planning."
     },
 
@@ -89,7 +104,8 @@
   "contact": {
     "label": "Contact",
     "heading": "Get in touch",
-    "intro": "For consultancy services, training enquiries, or general information, please contact us using the form below.",
+   "intro": "Whether you’re seeking expert consultancy, customized training, or simply want to learn more about our services, we’d love to hear from you. Use the form below to reach our team — we’ll ensure your query is directed to the right specialist and responded to without delay."
+,
     "name": "Name",
     "email": "Email",
     "phone": "Phone number",
@@ -112,12 +128,13 @@
     "learn": "What you will learn",
     "audience": "Who it is for",
     "format": "Format and delivery",
-    "contact": "For course dates, delivery formats, or registration information, please contact us for further details."
+"contact": "For tailored Fire Safety Engineering and Accessibility training solutions, get in touch with our team. We design and deliver customized programs to meet your organization’s specific needs, ensuring your staff gain practical, up-to-date knowledge aligned with current legislation and best practices."
+
   },
 
   "trainings": {
     "fire": {
-      "title": "Master in Fire Safety",
+      "title": "Fire Safety Engineering: Principles, Prevention, and Protection",
       "overview": "Advanced fire safety engineering training for professionals responsible for compliance, risk management, and emergency planning.",
       "why": "Fire safety failures continue to present significant risks in complex buildings. A deep understanding of fire behaviour, regulatory frameworks, and performance-based design is essential for safeguarding life and property.",
       "learn": [
