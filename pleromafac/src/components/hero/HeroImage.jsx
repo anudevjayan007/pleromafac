@@ -2,40 +2,51 @@ import { useEffect, useState } from "react";
 
 const images = [
   "/h1.jpeg",
-  "/h2.jpg",
-  "/h3.jpg",
-  "/h4.jpg",
-  "/fire-saftey.webp "
+  // "/h4.jpg",
+  // "/fire-saftey.webp "
 ];
+
 
 export default function HeroImage() {
   const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [prev, setPrev] = useState(0);
 
   useEffect(() => {
+    // preload images
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+
     const interval = setInterval(() => {
-      setFade(false); // fade out
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % images.length);
-        setFade(true); // fade in
-      }, 300);
-    }, 5000); // change every 5 seconds
+      setPrev(index);
+      setIndex(i => (i + 1) % images.length);
+    }, 6000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [index]);
 
   return (
-    <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+    <div className="relative w-full h-[420px] overflow-hidden rounded-2xl">
+
+      {/* Previous image (fades out) */}
       <img
-        src={images[index]}
-        alt="Fire safety and accessibility consultancy"
-        className={`w-full h-[420px] object-cover transition-opacity duration-700 ${
-          fade ? "opacity-100" : "opacity-0"
-        }`}
+        src={images[prev]}
+        className="absolute inset-0 w-full h-full object-cover
+                   opacity-0 transition-opacity duration-1000"
+        key={`prev-${prev}`}
       />
 
-      {/* Dark gradient overlay */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/40 to-transparent" />
+      {/* Current image (fades in) */}
+      <img
+        src={images[index]}
+        className="absolute inset-0 w-full h-full object-cover
+                   opacity-100 transition-opacity duration-1000"
+        key={`current-${index}`}
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
     </div>
   );
 }

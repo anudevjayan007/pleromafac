@@ -7,7 +7,8 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <div className="container w-full mt-16">
+<div className="container w-full mt-32 md:mt-8">
+
       <div className="grid lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT: TEXT */}
