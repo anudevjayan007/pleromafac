@@ -1,6 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 import HeroImage from "./HeroImage";
+import {
+  Link as RouterLink
+} from "react-router-dom";
 
 
 export default function Hero() {
@@ -23,16 +26,19 @@ export default function Hero() {
 
         <div className="flex flex-wrap gap-4 pt-4">
   {/* Contact */}
-  <Link
-    to="/contact"
-    smooth
-    duration={500}
-    offset={-80}
-  >
-    <button className="btn-primary">
-      {t("hero.ctaPrimary")}
-    </button>
-  </Link>
+
+
+<RouterLink
+  to="/contact"
+  onClick={() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }}
+>
+  <button className="btn-primary cursor-pointer">
+    {t("hero.ctaPrimary")}
+  </button>
+</RouterLink>
+
 
   {/* Services */}
   <Link
@@ -41,7 +47,7 @@ export default function Hero() {
     duration={500}
     offset={-80}
   >
-    <button className="btn-outline">
+    <button className="btn-outline cursor-pointer">
       {t("hero.ctaSecondary")}
     </button>
   </Link>

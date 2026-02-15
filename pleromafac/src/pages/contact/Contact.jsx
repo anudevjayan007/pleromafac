@@ -14,7 +14,7 @@ export default function Contact() {
 
     try {
       const res = await fetch(
-        "https://formsubmit.co/ajax/info@pleromafac.com",
+        "https://formsubmit.co/ajax/1b9c46590ff577ac91c1977f67baf8bb",
         {
           method: "POST",
           body: formData,
